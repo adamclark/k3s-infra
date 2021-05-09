@@ -38,7 +38,7 @@ kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token'
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/baremetal/deploy.yaml\n
 
-kubectl get pods -n ingress-nginx \\n  -l app.kubernetes.io/name=ingress-nginx --watch
+kubectl get pods -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx --watch
 ```
 
 2. Edit the ingress controller deployment to add command line argument `--enable-ssl-passthrough` (required for argocd).
