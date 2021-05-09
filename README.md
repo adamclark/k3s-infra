@@ -40,15 +40,18 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 kubectl get pods -n ingress-nginx \\n  -l app.kubernetes.io/name=ingress-nginx --watch
 ```
-1. Edit the ingress controller deployment to add command line argument `--enable-ssl-passthrough` (required for argocd).
+
+2. Edit the ingress controller deployment to add command line argument `--enable-ssl-passthrough` (required for argocd).
 ```
 kubectl edit deployment ingress-nginx-controller -n ingress-nginx
 ```
-1. Ensure that k3s.lab is configured in DNS to resolve to the k3s server's IP address. Create ingress for kubernetes dashboard:
+
+3. Ensure that k3s.lab is configured in DNS to resolve to the k3s server's IP address. Create ingress for kubernetes dashboard:
 ```
 kubectl apply -f kubernetes-dashboard/dashboard-ingress.yml
 ```
-1. Ensure that argocd.lab is configured in DNS to resolve to the k3s server's IP address. Create ingress for argocd:
+
+4. Ensure that argocd.lab is configured in DNS to resolve to the k3s server's IP address. Create ingress for argocd:
 ```
 kubectl apply -f argocd/argocd-ingress.yml
 ```
