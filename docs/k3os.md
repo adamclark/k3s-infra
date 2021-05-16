@@ -22,8 +22,8 @@ Configure DNS so that  `hostname` resolves to the IP address of the VM.
 
 2. In your local copy (~/.kube/config), replace “localhost” with the IP or hostname of the K3s server.
 
+### Post Installation Setup
+
 [Install the Kubernetes Dashboard](includes/kubernetes-dashboard.md)
 
-[Setup Traefik Ingress](includes/traefix-dashboard-ingress.md)
-
-[Install ArgoCD](includes/traefik-dashboard-ingress.md)
+[Install ArgoCD](includes/argocd.md)
