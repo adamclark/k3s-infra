@@ -13,14 +13,8 @@
 
 2. In your local copy (~/.kube/config), replace “localhost” with the IP or name of the K3s server.
 
-## Install the Kubernetes Dashboard
+Install the Kubernetes Dashboard](includes/kubernetes-dashboard.md)
 
-@@include[kubernetes-dashboard.md](includes/kubernetes-dashboard.md)
+[Setup Traefik Ingress](includes/nginx-traefix-dashboard-ingress.md)
 
-## Setup NGINX Ingress
-
-@@include[nginx-dashboard-ingress.md](includes/nginx-dashboard-ingress.md)
-
-## Install ArgoCD
-
-@@include[argocd.md](includes/nginx-dashboard-ingress.md)
+[Install ArgoCD](includes/nginx-dashboard-ingress.md)
