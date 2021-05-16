@@ -20,7 +20,11 @@ Configure DNS so that  `hostname` resolves to the IP address of the VM.
 
 ```scp rancher@<hostname>:/etc/rancher/k3s/k3s.yaml ~/.kube/config```
 
-2. In your local copy (~/.kube/config), replace “localhost” with the IP or hostname of the K3s server.
+2. In your local copy (~/.kube/config), replace “127.0.0.1” in the config file with the IP or hostname of the K3s server.
+
+### Setup Traefik Ingress
+
+```kubectl apply -f traefik/traefik-ingress.yaml```
 
 ### Post Installation Setup
 
