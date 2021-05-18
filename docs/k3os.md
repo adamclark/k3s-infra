@@ -31,3 +31,6 @@ Configure DNS so that  `hostname` resolves to the IP address of the VM.
 [Install the Kubernetes Dashboard](includes/kubernetes-dashboard.md)
 
 [Install ArgoCD](includes/argocd.md)
+
+Start ntpd to sync system time
+```sudo service ntpd start```
