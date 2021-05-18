@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`k3s`)
+      match: Host(`k3s.lab`)
       priority: 10
       services:
         - name: kubernetes-dashboard
