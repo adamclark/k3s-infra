@@ -27,7 +27,7 @@ kubectl apply -f kubernetes-dashboard/dashboard-ingress-traefik.yml
 ## NGINX Ingress
 1. Install the NGINX ingress controller and wait ubtil it's running:
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/baremetal/deploy.yaml\n
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/baremetal/deploy.yaml
 
 kubectl get pods -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx --watch
 ```
