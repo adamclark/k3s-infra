@@ -20,6 +20,11 @@ kubectl -n kubernetes-dashboard create token admin-user
 
 ## Traefik Ingress
 
+Create insecure transport (skip tls verification) for the kubernetes dashboard:
+```
+kubectl apply -f kubernetes-dashboard/insecure-server-transport.yml
+```
+
 Create ingress for the kubernetes dashboard:
 ```
 kubectl apply -f kubernetes-dashboard/dashboard-ingress-traefik.yml
