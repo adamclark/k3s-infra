@@ -13,9 +13,9 @@ helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dash
 kubectl create -f kubernetes-dashboard/dashboard.admin-user.yml -f kubernetes-dashboard/dashboard.admin-user-role.yml
 ```
 
-3. Get the dashboard user's token (to authenticate access to the dashboard):
+3. Create a token for the dashboard user (to authenticate access to the dashboard):
 ```
-kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token'
+kubectl -n kubernetes-dashboard create token admin-user
 ```
 
 ## Traefik Ingress
